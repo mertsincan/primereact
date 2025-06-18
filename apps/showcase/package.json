@@ -4,18 +4,17 @@
     "scripts": {
         "dev": "npm run dev:init && next dev --turbopack",
         "dev:init": "npm run clean && npm run build:init",
+        "clean": "npx rimraf --glob ./__store__ ./.contentlayer ./.next",
         "scan": "npm run dev && react-scan localhost:3000",
         "build": "npm run build:init && next build",
         "build:init": "npm run build:store && npm run build:content",
         "build:content": "contentlayer2 build",
         "build:store": "node ./scripts/generate-store.mjs",
         "build:apidoc": "node ./scripts/build-apidoc.mjs",
-        "clean": "npx rimraf --glob ./__store__ ./.contentlayer ./.next",
         "start": "next start",
         "lint": "next lint"
     },
     "dependencies": {
-        "@primereact/code-viewer": "workspace:*",
         "@primereact/icons": "workspace:*",
         "@primereact/hooks": "workspace:*",
         "@primeuix/themes": "catalog:",
@@ -25,7 +24,7 @@
         "gray-matter": "^4.0.3",
         "hastscript": "^9.0.1",
         "mdast-util-toc": "^7.1.0",
-        "next": "15.2.1",
+        "next": "15.2.3",
         "next-contentlayer2": "0.5.8",
         "primeicons": "catalog:",
         "primereact": "workspace:*",

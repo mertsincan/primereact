@@ -1,14 +1,14 @@
 import { Component } from '@primereact/core/component';
 import { mergeProps } from '@primeuix/utils';
 import * as React from 'react';
-import { defaultProps } from './Icon.props';
+import { defaultIconProps } from './Icon.props';
 import { styles } from './Icon.style';
 import { withIcon } from './withIcon';
 
 export const Icon = withIcon({
     name: 'Icon',
     styles,
-    defaultProps,
+    defaultProps: defaultIconProps,
     render(instance) {
         const { id, props, ptmi, pti, cx, sx } = instance;
 
@@ -18,7 +18,7 @@ export const Icon = withIcon({
                 style: sx('root'),
                 className: cx('root')
             },
-            pti(),
+            pti?.(),
             ptmi('root')
         );
 

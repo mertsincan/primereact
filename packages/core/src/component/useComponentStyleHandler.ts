@@ -5,13 +5,20 @@ import { css as Css, dt, Theme } from '@primeuix/styled';
 import { isNotEmpty, minifyCSS, resolve, toElement } from '@primeuix/utils';
 import * as React from 'react';
 
-export const useComponentStyleHandler = <Styles>(styles?: Styles, elementRef?: React.Ref<HTMLElement>) => {
+/**
+ * A custom hook for managing component styles.
+ *
+ * @param styles The styles to apply to the component.
+ * @param elementRef A reference to the HTML element.
+ * @returns An object containing methods to load and manage styles.
+ */
+export function useComponentStyleHandler<Styles>(styles?: Styles, elementRef?: React.Ref<HTMLElement>) {
     const theme = React.useContext(ThemeContext);
-    const { load } = useStyle();
+    const [load] = useStyle();
 
     const _load = React.useCallback(
         (css?: string, options?: Record<PropertyKey, unknown>) => {
-            load({ name: options?.name, css, element: toElement(elementRef) });
+            load({ name: options?.name as string | undefined, css, element: toElement(elementRef), options });
         },
         [load, elementRef]
     );
@@ -20,7 +27,7 @@ export const useComponentStyleHandler = <Styles>(styles?: Styles, elementRef?: R
         const handler = {
             name: 'base',
             ...(styles as StylesOptions),
-            load: (style: StyleType = '', options: Record<PropertyKey, unknown> & { name?: string } = {}, extendedStyle = '', enableThemeTransform = false) => {
+            load(style: StyleType = '', options: Record<PropertyKey, unknown> & { name?: string } = {}, extendedStyle = '', enableThemeTransform = false) {
                 const name = options.name || handler.name;
                 const resolvedStyle = Css`${style}${extendedStyle}` as string;
                 const computedStyle = enableThemeTransform ? Theme.transformCSS(name, resolvedStyle) : resolvedStyle;
@@ -48,6 +55,7 @@ export const useComponentStyleHandler = <Styles>(styles?: Styles, elementRef?: R
             },
             getStyleSheet(extendedCSS = '', props = {}) {
                 if (this.css) {
+                    // @ts-expect-error: update dt definition in primeuix/styled
                     const _css = resolve(this.css, { dt }) as string;
                     const _style = minifyCSS(Css`${_css}${extendedCSS}`);
                     const _props = Object.entries(props)
@@ -90,4 +98,4 @@ export const useComponentStyleHandler = <Styles>(styles?: Styles, elementRef?: R
 
         return handler;
     }, [styles, theme, _load]);
-};
+}

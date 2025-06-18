@@ -1,10 +1,17 @@
 import { useMountEffect, useUnmountEffect, useUpdateEffect } from '@primereact/hooks';
-import type { GlobalComponentProps, Instance, PassThroughOptions } from '@primereact/types/core';
+import type { GlobalComponentProps, Instance, PassThroughOptions, useComponentPTReturnType } from '@primereact/types/core';
 import { mergeProps } from '@primeuix/utils/mergeprops';
 import { getKeyValue, isArray, isFunction, isNotEmpty, isString, resolve, toFlatCase } from '@primeuix/utils/object';
 import * as React from 'react';
 
-export const useComponentPT = <Props extends GlobalComponentProps, IProps, Params>(instance: Instance<Props, IProps>, $params?: Params) => {
+/**
+ * A hook for managing pass-through options for a component.
+ *
+ * @param instance The instance of the component.
+ * @param $params Additional parameters for the hook.
+ * @returns An object containing the pass-through options.
+ */
+export function useComponentPT<Props extends GlobalComponentProps, IProps, Params>(instance: Instance<Props, IProps>, $params?: Params): useComponentPTReturnType {
     const { id, name, props, attrs, $primereact, $attrSelector } = instance || {};
 
     // methods
@@ -196,4 +203,4 @@ export const useComponentPT = <Props extends GlobalComponentProps, IProps, Param
         }),
         [ptm, ptmi, ptmo]
     );
-};
+}

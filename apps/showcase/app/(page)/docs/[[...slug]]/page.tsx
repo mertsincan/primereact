@@ -17,8 +17,13 @@ async function getDocFromParams({ slug }: { slug: string[] }) {
     return doc;
 }
 
-export async function generateMetadata({ params }: { params: { slug: string[] } }): Promise<Metadata> {
-    const { slug } = params;
+type PageProps = {
+    params: Promise<{ slug: string[] }>;
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params;
     const doc = await getDocFromParams({ slug });
 
     if (!doc) {
@@ -47,21 +52,31 @@ export async function generateStaticParams() {
     }));
 }
 
-async function DocsPage({ params }: { params: { slug: string[] } }) {
-    const { slug } = params;
+async function DocsPage({ params }: PageProps) {
+    const { slug } = await params;
     const doc = await getDocFromParams({ slug });
 
     if (!doc) {
         notFound();
     }
 
+    if (doc.hideTabAndToc) {
+        return (
+            <div className="flex-1 flex items-start justify-between gap-10 xl:gap-20">
+                <div className="flex-1 overflow-hidden pb-12">
+                    <DocMdx code={doc.body.code} />
+                </div>
+            </div>
+        );
+    }
+
     return (
         <>
             {doc.component && <DocTabs componentName={doc.component} />}
             <div className="flex-1 flex items-start justify-between gap-10 xl:gap-20">
-                <div className="flex-1 overflow-hidden">
-                    <h1>{doc.title}</h1>
-                    <p className="text-xl">{doc.description}</p>
+                <div className="flex-1 overflow-hidden pb-12">
+                    <h1 className="text-4xl font-semibold leading-[1.2] text-(--high-contrast-text-color) mb-2">{doc.title}</h1>
+                    <p className="text-xl leading-[1.625]">{doc.description}</p>
                     <DocMdx code={doc.body.code} />
                 </div>
                 <DocToc toc={doc.toc} />

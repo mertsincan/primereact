@@ -5,20 +5,17 @@ import { useProps } from '@primereact/hooks';
 import type { PrimeReactProps } from '@primereact/types/core';
 import { resolve } from '@primeuix/utils';
 import * as React from 'react';
-import { defaultProps } from './PrimeReact.props';
+import { defaultConfigProps } from './PrimeReact.props';
 
 export const PrimeReactContext = React.createContext<PrimeReactProps | undefined>(undefined);
 
-export const PrimeReactProvider = (inProps: React.PropsWithChildren<PrimeReactProps> = {}) => {
-    const { props, attrs } = useProps(inProps, defaultProps);
+export function PrimeReactProvider(inProps: React.PropsWithChildren<PrimeReactProps> = {}) {
+    const { props, attrs } = useProps(inProps, defaultConfigProps);
 
     // states
-    const [ripple, setRipple] = React.useState(props.ripple);
     const [inputVariant, setInputVariant] = React.useState(props.inputVariant);
 
     const value = {
-        ripple,
-        setRipple,
         inputVariant,
         setInputVariant
     };
@@ -34,4 +31,4 @@ export const PrimeReactProvider = (inProps: React.PropsWithChildren<PrimeReactPr
             </LocaleProvider>
         </PrimeReactContext.Provider>
     );
-};
+}

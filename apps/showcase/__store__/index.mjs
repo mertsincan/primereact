@@ -5,6 +5,38 @@
 import * as React from 'react';
 
 export const Store = {
+    'accessibility': {
+        'accessibility-checkbox-demo': {
+            'component': React.lazy(() => import('demo/accessibility/accessibility-checkbox-demo.tsx')),
+            'filePath': 'demo/accessibility/accessibility-checkbox-demo.tsx',
+        },
+    },
+    'accordion': {
+        'basic-demo': {
+            'component': React.lazy(() => import('demo/accordion/basic-demo.tsx')),
+            'filePath': 'demo/accordion/basic-demo.tsx',
+        },
+        'custom-indicator-demo': {
+            'component': React.lazy(() => import('demo/accordion/custom-indicator-demo.tsx')),
+            'filePath': 'demo/accordion/custom-indicator-demo.tsx',
+        },
+        'disabled-demo': {
+            'component': React.lazy(() => import('demo/accordion/disabled-demo.tsx')),
+            'filePath': 'demo/accordion/disabled-demo.tsx',
+        },
+        'multiple-demo': {
+            'component': React.lazy(() => import('demo/accordion/multiple-demo.tsx')),
+            'filePath': 'demo/accordion/multiple-demo.tsx',
+        },
+        'template-demo': {
+            'component': React.lazy(() => import('demo/accordion/template-demo.tsx')),
+            'filePath': 'demo/accordion/template-demo.tsx',
+        },
+        'use-with-radiobutton': {
+            'component': React.lazy(() => import('demo/accordion/use-with-radiobutton.tsx')),
+            'filePath': 'demo/accordion/use-with-radiobutton.tsx',
+        },
+    },
     'avatar': {
         'avatar-pt': {
             'component': React.lazy(() => import('demo/avatar/avatar-pt.tsx')),
@@ -127,6 +159,16 @@ export const Store = {
             'filePath': 'demo/button/text-demo.tsx',
         },
     },
+    'card': {
+        'advanced-demo': {
+            'component': React.lazy(() => import('demo/card/advanced-demo.tsx')),
+            'filePath': 'demo/card/advanced-demo.tsx',
+        },
+        'basic-demo': {
+            'component': React.lazy(() => import('demo/card/basic-demo.tsx')),
+            'filePath': 'demo/card/basic-demo.tsx',
+        },
+    },
     'checkbox': {
         'basic-demo': {
             'component': React.lazy(() => import('demo/checkbox/basic-demo.tsx')),
@@ -191,6 +233,46 @@ export const Store = {
             'filePath': 'demo/chip/template-demo.tsx',
         },
     },
+    'divider': {
+        'basic-demo': {
+            'component': React.lazy(() => import('demo/divider/basic-demo.tsx')),
+            'filePath': 'demo/divider/basic-demo.tsx',
+        },
+        'content-demo': {
+            'component': React.lazy(() => import('demo/divider/content-demo.tsx')),
+            'filePath': 'demo/divider/content-demo.tsx',
+        },
+        'divider-pt': {
+            'component': React.lazy(() => import('demo/divider/divider-pt.tsx')),
+            'filePath': 'demo/divider/divider-pt.tsx',
+        },
+        'login-demo': {
+            'component': React.lazy(() => import('demo/divider/login-demo.tsx')),
+            'filePath': 'demo/divider/login-demo.tsx',
+        },
+        'type-demo': {
+            'component': React.lazy(() => import('demo/divider/type-demo.tsx')),
+            'filePath': 'demo/divider/type-demo.tsx',
+        },
+        'vertical-demo': {
+            'component': React.lazy(() => import('demo/divider/vertical-demo.tsx')),
+            'filePath': 'demo/divider/vertical-demo.tsx',
+        },
+    },
+    'fieldset': {
+        'basic-demo': {
+            'component': React.lazy(() => import('demo/fieldset/basic-demo.tsx')),
+            'filePath': 'demo/fieldset/basic-demo.tsx',
+        },
+        'fieldset-pt': {
+            'component': React.lazy(() => import('demo/fieldset/fieldset-pt.tsx')),
+            'filePath': 'demo/fieldset/fieldset-pt.tsx',
+        },
+        'toggleable-demo': {
+            'component': React.lazy(() => import('demo/fieldset/toggleable-demo.tsx')),
+            'filePath': 'demo/fieldset/toggleable-demo.tsx',
+        },
+    },
     'floatlabel': {
         'basic-demo': {
             'component': React.lazy(() => import('demo/floatlabel/basic-demo.tsx')),
@@ -207,6 +289,20 @@ export const Store = {
         'variants-demo': {
             'component': React.lazy(() => import('demo/floatlabel/variants-demo.tsx')),
             'filePath': 'demo/floatlabel/variants-demo.tsx',
+        },
+    },
+    'iftalabel': {
+        'basic-demo': {
+            'component': React.lazy(() => import('demo/iftalabel/basic-demo.tsx')),
+            'filePath': 'demo/iftalabel/basic-demo.tsx',
+        },
+        'iftalabel-pt': {
+            'component': React.lazy(() => import('demo/iftalabel/iftalabel-pt.tsx')),
+            'filePath': 'demo/iftalabel/iftalabel-pt.tsx',
+        },
+        'invalid-demo': {
+            'component': React.lazy(() => import('demo/iftalabel/invalid-demo.tsx')),
+            'filePath': 'demo/iftalabel/invalid-demo.tsx',
         },
     },
     'inplace': {
@@ -313,6 +409,18 @@ export const Store = {
             'filePath': 'demo/panel/uncontrolled-demo.tsx',
         },
     },
+    'passthrough': {
+        'basic-demo': {
+            'component': React.lazy(() => import('demo/passthrough/basic-demo.tsx')),
+            'filePath': 'demo/passthrough/basic-demo.tsx',
+        },
+    },
+    'primeicons': {
+        'list-demo': {
+            'component': React.lazy(() => import('demo/primeicons/list-demo.tsx')),
+            'filePath': 'demo/primeicons/list-demo.tsx',
+        },
+    },
     'progressbar': {
         'basic-demo': {
             'component': React.lazy(() => import('demo/progressbar/basic-demo.tsx')),
@@ -391,6 +499,24 @@ export const Store = {
             'filePath': 'demo/radiobutton/sizes-demo.tsx',
         },
     },
+    'scrollarea': {
+        'basic-demo': {
+            'component': React.lazy(() => import('demo/scrollarea/basic-demo.tsx')),
+            'filePath': 'demo/scrollarea/basic-demo.tsx',
+        },
+        'custom-demo': {
+            'component': React.lazy(() => import('demo/scrollarea/custom-demo.tsx')),
+            'filePath': 'demo/scrollarea/custom-demo.tsx',
+        },
+        'horizontal-demo': {
+            'component': React.lazy(() => import('demo/scrollarea/horizontal-demo.tsx')),
+            'filePath': 'demo/scrollarea/horizontal-demo.tsx',
+        },
+        'scrollarea-pt': {
+            'component': React.lazy(() => import('demo/scrollarea/scrollarea-pt.tsx')),
+            'filePath': 'demo/scrollarea/scrollarea-pt.tsx',
+        },
+    },
     'skeleton': {
         'card-demo': {
             'component': React.lazy(() => import('demo/skeleton/card-demo.tsx')),
@@ -415,6 +541,68 @@ export const Store = {
         'skeleton-pt': {
             'component': React.lazy(() => import('demo/skeleton/skeleton-pt.tsx')),
             'filePath': 'demo/skeleton/skeleton-pt.tsx',
+        },
+    },
+    'splitter': {
+        'horizontal-demo': {
+            'component': React.lazy(() => import('demo/splitter/horizontal-demo.tsx')),
+            'filePath': 'demo/splitter/horizontal-demo.tsx',
+        },
+        'nested-demo': {
+            'component': React.lazy(() => import('demo/splitter/nested-demo.tsx')),
+            'filePath': 'demo/splitter/nested-demo.tsx',
+        },
+        'size-demo': {
+            'component': React.lazy(() => import('demo/splitter/size-demo.tsx')),
+            'filePath': 'demo/splitter/size-demo.tsx',
+        },
+        'splitter-pt': {
+            'component': React.lazy(() => import('demo/splitter/splitter-pt.tsx')),
+            'filePath': 'demo/splitter/splitter-pt.tsx',
+        },
+        'vertical-demo': {
+            'component': React.lazy(() => import('demo/splitter/vertical-demo.tsx')),
+            'filePath': 'demo/splitter/vertical-demo.tsx',
+        },
+    },
+    'stepper': {
+        'horizontal-demo': {
+            'component': React.lazy(() => import('demo/stepper/horizontal-demo.tsx')),
+            'filePath': 'demo/stepper/horizontal-demo.tsx',
+        },
+        'linear-demo': {
+            'component': React.lazy(() => import('demo/stepper/linear-demo.tsx')),
+            'filePath': 'demo/stepper/linear-demo.tsx',
+        },
+        'stepper-pt': {
+            'component': React.lazy(() => import('demo/stepper/stepper-pt.tsx')),
+            'filePath': 'demo/stepper/stepper-pt.tsx',
+        },
+        'steps-only-demo': {
+            'component': React.lazy(() => import('demo/stepper/steps-only-demo.tsx')),
+            'filePath': 'demo/stepper/steps-only-demo.tsx',
+        },
+        'template-demo': {
+            'component': React.lazy(() => import('demo/stepper/template-demo.tsx')),
+            'filePath': 'demo/stepper/template-demo.tsx',
+        },
+        'vertical-demo': {
+            'component': React.lazy(() => import('demo/stepper/vertical-demo.tsx')),
+            'filePath': 'demo/stepper/vertical-demo.tsx',
+        },
+    },
+    'styled': {
+        'colors-demo': {
+            'component': React.lazy(() => import('demo/styled/colors-demo.tsx')),
+            'filePath': 'demo/styled/colors-demo.tsx',
+        },
+        'css-modules-demo': {
+            'component': React.lazy(() => import('demo/styled/css-modules-demo.tsx')),
+            'filePath': 'demo/styled/css-modules-demo.tsx',
+        },
+        'scoped-tokens-demo': {
+            'component': React.lazy(() => import('demo/styled/scoped-tokens-demo.tsx')),
+            'filePath': 'demo/styled/scoped-tokens-demo.tsx',
         },
     },
     'switch': {
@@ -449,6 +637,36 @@ export const Store = {
         'uncontrolled-demo': {
             'component': React.lazy(() => import('demo/switch/uncontrolled-demo.tsx')),
             'filePath': 'demo/switch/uncontrolled-demo.tsx',
+        },
+    },
+    'tabs': {
+        'basic-demo': {
+            'component': React.lazy(() => import('demo/tabs/basic-demo.tsx')),
+            'filePath': 'demo/tabs/basic-demo.tsx',
+        },
+        'controlled-demo': {
+            'component': React.lazy(() => import('demo/tabs/controlled-demo.tsx')),
+            'filePath': 'demo/tabs/controlled-demo.tsx',
+        },
+        'custom-indicator-demo': {
+            'component': React.lazy(() => import('demo/tabs/custom-indicator-demo.tsx')),
+            'filePath': 'demo/tabs/custom-indicator-demo.tsx',
+        },
+        'disabled-demo': {
+            'component': React.lazy(() => import('demo/tabs/disabled-demo.tsx')),
+            'filePath': 'demo/tabs/disabled-demo.tsx',
+        },
+        'dynamic-demo': {
+            'component': React.lazy(() => import('demo/tabs/dynamic-demo.tsx')),
+            'filePath': 'demo/tabs/dynamic-demo.tsx',
+        },
+        'scrollable-demo': {
+            'component': React.lazy(() => import('demo/tabs/scrollable-demo.tsx')),
+            'filePath': 'demo/tabs/scrollable-demo.tsx',
+        },
+        'template-demo': {
+            'component': React.lazy(() => import('demo/tabs/template-demo.tsx')),
+            'filePath': 'demo/tabs/template-demo.tsx',
         },
     },
     'tag': {
@@ -533,6 +751,26 @@ export const Store = {
         'togglebutton-pt': {
             'component': React.lazy(() => import('demo/togglebutton/togglebutton-pt.tsx')),
             'filePath': 'demo/togglebutton/togglebutton-pt.tsx',
+        },
+    },
+    'toolbar': {
+        'basic-demo': {
+            'component': React.lazy(() => import('demo/toolbar/basic-demo.tsx')),
+            'filePath': 'demo/toolbar/basic-demo.tsx',
+        },
+        'custom-demo': {
+            'component': React.lazy(() => import('demo/toolbar/custom-demo.tsx')),
+            'filePath': 'demo/toolbar/custom-demo.tsx',
+        },
+        'toolbar-pt': {
+            'component': React.lazy(() => import('demo/toolbar/toolbar-pt.tsx')),
+            'filePath': 'demo/toolbar/toolbar-pt.tsx',
+        },
+    },
+    'uikit': {
+        'basic-demo': {
+            'component': React.lazy(() => import('demo/uikit/basic-demo.tsx')),
+            'filePath': 'demo/uikit/basic-demo.tsx',
         },
     },
 };

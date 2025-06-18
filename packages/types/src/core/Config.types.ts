@@ -41,7 +41,7 @@ export interface ZIndex {
 /**
  * Defines the PrimeReact props type.
  */
-export declare type PrimeReactProps = {
+export interface PrimeReactProps {
     /**
      * Defines the Content Security Policy (CSP) configuration.
      * @see {@link https://primereact.org/configuration/#csp}
@@ -66,7 +66,7 @@ export declare type PrimeReactProps = {
     /**
      * Defines the passthrough options.
      */
-    pt?: Pick<PassThroughProps, 'value'> | undefined;
+    pt?: PassThroughProps['value'] | undefined;
     /**
      * Defines the passthrough options.
      */
@@ -82,7 +82,7 @@ export declare type PrimeReactProps = {
     /**
      * Collects styles of the used components.
      */
-    stylesheet?: Pick<ThemeProps, 'stylesheet'> | undefined;
+    stylesheet?: ThemeProps['stylesheet'] | undefined;
     /**
      * Defines whether the components should be unstyled.
      */
@@ -91,4 +91,4 @@ export declare type PrimeReactProps = {
      * Defines the z-index values.
      */
     zIndex?: ZIndex | undefined;
-};
+}

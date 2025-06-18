@@ -1,6 +1,16 @@
 {
     "data": [
         {
+            "name": "Theming",
+            "icon": "pi pi-palette",
+            "children": [
+                {
+                    "name": "Styled",
+                    "to": "/docs/theming/styled"
+                }
+            ]
+        },
+        {
             "name": "Components",
             "icon": "pi pi-compass",
             "children": [
@@ -18,6 +28,10 @@
                         {
                             "name": "FloatLabel",
                             "to": "/docs/components/floatlabel"
+                        },
+                        {
+                            "name": "IftaLabel",
+                            "to": "/docs/components/iftalabel"
                         },
                         {
                             "name": "RadioButton",
@@ -46,8 +60,40 @@
                     "name": "Panel",
                     "children": [
                         {
+                            "name": "Accordion",
+                            "to": "/docs/components/accordion"
+                        },
+                        {
+                            "name": "Card",
+                            "to": "/docs/components/card"
+                        },
+                        {
+                            "name": "Divider",
+                            "to": "/docs/components/divider"
+                        },
+                        {
+                            "name": "Fieldset",
+                            "to": "/docs/components/fieldset"
+                        },
+                        {
                             "name": "Panel",
                             "to": "/docs/components/panel"
+                        },
+                        {
+                            "name": "ScrollArea",
+                            "to": "/docs/components/scrollarea"
+                        },
+                        {
+                            "name": "Splitter",
+                            "to": "/docs/components/splitter"
+                        },
+                        {
+                            "name": "Stepper",
+                            "to": "/docs/components/stepper"
+                        },
+                        {
+                            "name": "Toolbar",
+                            "to": "/docs/components/toolbar"
                         }
                     ]
                 },
@@ -91,6 +137,115 @@
                             "to": "/docs/components/tag"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Pass Through",
+            "icon": "pi pi-directions",
+            "to": "/docs/passthrough"
+        },
+        {
+            "name": "Tailwind CSS",
+            "icon": "pi pi-star",
+            "to": "/docs/tailwind"
+        },
+        {
+            "name": "Icons",
+            "icon": "pi pi-eye",
+            "children": [
+                {
+                    "name": "Prime Icons",
+                    "to": "/docs/icons"
+                },
+                {
+                    "name": "Custom Icons",
+                    "to": "/docs/customicons"
+                }
+            ]
+        },
+        {
+            "name": "Figma UI Kit",
+            "icon": "pi pi-pencil",
+            "to": "/docs/uikit"
+        },
+        {
+            "name": "PrimeBlocks",
+            "icon": "pi pi-server",
+            "href": "https://primeblocks.org"
+        },
+        {
+            "name": "Guides",
+            "icon": "pi pi-book",
+            "children": [
+                {
+                    "name": "Accessibility",
+                    "to": "/docs/guides/accessibility"
+                },
+                {
+                    "name": "PrimeTV",
+                    "href": "https://www.youtube.com/channel/UCTgmp69aBOlLnPEqlUyetWw"
+                },
+                {
+                    "name": "RTL",
+                    "to": "/docs/guides/rtl"
+                }
+            ]
+        },
+        {
+            "name": "Support",
+            "icon": "pi pi-question",
+            "children": [
+                {
+                    "name": "Discord",
+                    "href": "https://discord.gg/gzKFYnpmCY"
+                },
+                {
+                    "name": "Forum",
+                    "href": "https://github.com/orgs/primefaces/discussions"
+                },
+                {
+                    "name": "PRO Support",
+                    "to": "/docs/support"
+                }
+            ]
+        },
+        {
+            "name": "Discover",
+            "icon": "pi pi-search",
+            "children": [
+                {
+                    "name": "About Us",
+                    "to": "/docs/team"
+                },
+                {
+                    "name": "Source Code",
+                    "href": "https://github.com/primefaces/primereact"
+                },
+                {
+                    "name": "Changelog",
+                    "href": "https://github.com/primefaces/primereact/blob/master/CHANGELOG.md"
+                },
+                {
+                    "name": "Contribution",
+                    "to": "/docs/contribution",
+                    "icon": "pi pi-users"
+                },
+                {
+                    "name": "Store",
+                    "href": "https://www.primefaces.org/store/"
+                },
+                {
+                    "name": "Twitter",
+                    "href": "https://twitter.com/primereact"
+                },
+                {
+                    "name": "Newsletter",
+                    "href": "https://www.primefaces.org/newsletter"
+                },
+                {
+                    "name": "PrimeGear",
+                    "href": "https://gear.primefaces.org"
                 }
             ]
         }

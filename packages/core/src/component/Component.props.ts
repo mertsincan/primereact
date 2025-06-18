@@ -1,4 +1,5 @@
 import type { ComponentProps, GlobalComponentProps } from '@primereact/types/core';
+import { omit } from '@primeuix/utils';
 
 export const globalProps: GlobalComponentProps = {
     ref: undefined,
@@ -14,7 +15,8 @@ export const globalProps: GlobalComponentProps = {
     children: undefined
 };
 
-export const defaultProps: ComponentProps = {
+export const defaultComponentProps: ComponentProps = {
+    ...(omit(globalProps, 'pt', 'ptOptions', 'dt', 'styles') as Record<PropertyKey, unknown>),
     instance: undefined,
-    options: undefined
+    attrs: undefined
 };
